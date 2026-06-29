@@ -314,17 +314,9 @@ btn.innerHTML = "در حال ارسال...";
 answers.createdAt = new Date().toLocaleString("fa-IR");
 
 const response = await fetch(API_URL,{
-
-method:"POST",
-
-headers:{
-
-"Content-Type":"application/json"
-
-},
-
-body:JSON.stringify(answers)
-
+    method:"POST",
+    redirect:"follow",
+    body:JSON.stringify(answers)
 });
 
 const result = await response.text();
