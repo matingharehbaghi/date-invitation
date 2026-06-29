@@ -77,32 +77,33 @@ const funnyMessages = [
 
 ];
 
-function moveButton(){
+function moveButton() {
 
-const card = document.querySelector(".card");
+    const card = document.querySelector(".card");
 
-const padding = 20;
+    const padding = 25;
 
-const maxX = card.clientWidth - noButton.offsetWidth - padding;
+    const cardRect = card.getBoundingClientRect();
 
-const maxY = card.clientHeight - noButton.offsetHeight - padding;
+    const btnWidth = noButton.offsetWidth;
+    const btnHeight = noButton.offsetHeight;
 
-const x = Math.random() * maxX;
+    const maxX = cardRect.width - btnWidth - padding * 2;
+    const maxY = cardRect.height - btnHeight - padding * 2;
 
-const y = Math.random() * maxY;
+    const x = Math.random() * maxX + padding;
+    const y = Math.random() * maxY + padding;
 
-noButton.style.left = x + "px";
-
-noButton.style.top = y + "px";
-
-noButton.style.position = "absolute";
-
+    noButton.style.position = "absolute";
+    noButton.style.left = x + "px";
+    noButton.style.top = y + "px";
 }
 
 function escapeButton(){
 
 message.innerHTML = funnyMessages[
 Math.floor(Math.random()*funnyMessages.length)
+
 ];
 
 noCount++;
