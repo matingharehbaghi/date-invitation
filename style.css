@@ -25,11 +25,8 @@ padding:25px 0;
 
     overflow-y:auto;
 
-    display:flex;
 
-    justify-content:center;
-
-    align-items:center;
+    
 
 }
 
@@ -39,21 +36,19 @@ padding:25px 0;
 
 .page{
 
-    position:absolute;
+position:fixed;
 
-    width:100%;
+inset:0;
 
-    height:100vh;
+display:none;
 
-    display:none;
+justify-content:center;
 
-    justify-content:center;
+align-items:center;
 
-    align-items:center;
+padding:20px;
 
-    flex-direction:column;
-
-    animation:fade .5s;
+animation:fade .5s;
 
 }
 
@@ -193,6 +188,8 @@ box-shadow:
 text-align:center;
 
 position:relative;
+margin:auto;
+overflow:hidden;
 
 }
 
@@ -209,19 +206,12 @@ overflow:hidden;
 }
 
 .topImage{
-
-width:220px;
-
-margin:auto;
-
-display:block;
-
-margin-bottom:20px;
-
-user-select:none;
-
-pointer-events:none;
-
+    display:block;
+    margin:0 auto 25px;
+    width:70%;
+    max-width:220px;
+    height:auto;
+    border-radius:18px;
 }
 
 .card h2{
