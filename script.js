@@ -158,20 +158,13 @@ document.body.insertAdjacentHTML(
 
 <div id="yesScreen">
 
-<div>
-
-<h1>🎉🎉🎉</h1>
-
-<h2>گفت آره ❤️</h2>
-
-</div>
+    <img src="images/yes-popup.png" alt="Yes">
 
 </div>
 
 `
 
 );
-
 setTimeout(() => {
 
 document.getElementById("yesScreen").remove();
