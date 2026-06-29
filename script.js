@@ -108,6 +108,10 @@ Math.floor(Math.random()*funnyMessages.length)
 noCount++;
 
 moveButton();
+noButton.addEventListener("touchstart",(e)=>{
+e.preventDefault();
+escapeButton();
+});
 
 const scale = Math.max(0.45,1-noCount*0.12);
 
