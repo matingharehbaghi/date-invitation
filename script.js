@@ -139,41 +139,29 @@ showYesAnimation();
 //========================
 
 function showYesAnimation(){
-if(document.getElementById("yesScreen")) return;
-confetti({
 
-particleCount:200,
+    confetti({
 
-spread:120,
+        particleCount:200,
+        spread:120,
+        origin:{y:0.6}
 
-origin:{y:0.6}
+    });
 
-});
+    const popup=document.getElementById("yesScreen");
 
-document.body.insertAdjacentHTML(
+    popup.classList.add("show");
 
-"beforeend",
+    setTimeout(()=>{
 
-`
+        popup.classList.remove("show");
 
-<div id="yesScreen">
+        go(1);
 
-    <img src="images/yes-popup.png" alt="Yes">
-
-</div>
-
-`
-
-);
-setTimeout(() => {
-
-document.getElementById("yesScreen").remove();
-
-go(1);
-
-},2200);
+    },2200);
 
 }
+
 //======================
 // Slides
 //======================
