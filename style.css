@@ -608,3 +608,99 @@ transform:translateY(0);
 }
 
 }
+/* ==========================
+   Mobile Responsive
+========================== */
+
+*{
+    box-sizing:border-box;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+.container{
+    width:min(95%,520px);
+    margin:auto;
+}
+
+.card{
+
+    width:100%;
+
+    max-width:500px;
+
+    min-height:650px;
+
+    height:auto;
+
+    padding:25px 20px 35px;
+
+}
+
+.slide{
+
+    width:100%;
+
+}
+
+.topImage{
+
+    width:170px;
+
+    max-width:70%;
+
+}
+
+button{
+
+    max-width:100%;
+
+    white-space:normal;
+
+    word-break:break-word;
+
+}
+@media (max-width:600px){
+
+.card{
+
+    min-height:100vh;
+
+    border-radius:0;
+
+    padding:30px 18px 40px;
+
+}
+
+h1{
+
+    font-size:30px;
+
+}
+
+h2{
+
+    font-size:24px;
+
+}
+
+.option{
+
+    width:100%;
+
+}
+
+textarea{
+
+    min-height:130px;
+
+}
+
+}

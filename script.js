@@ -325,13 +325,23 @@ if(response.ok && result==="OK"){
 
 btn.innerHTML="❤️ ثبت شد";
 
-setTimeout(()=>{
+document.querySelector(".card").innerHTML = `
 
-alert("💜 پاسخ با موفقیت ثبت شد.");
+<div style="padding:40px 20px;text-align:center">
 
-location.reload();
+<h1 style="font-size:38px;">💜</h1>
 
-},800);
+<h2>پاسخت ثبت شد</h2>
+
+<p style="margin-top:20px;font-size:18px;line-height:2">
+
+بی‌صبرانه منتظر دیدنت هستم 🌹
+
+</p>
+
+</div>
+
+`;
 
 }else{
 
