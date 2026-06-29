@@ -77,27 +77,6 @@ const funnyMessages = [
 
 ];
 
-function moveButton() {
-
-    const card = document.querySelector(".card");
-
-    const padding = 25;
-
-    const cardRect = card.getBoundingClientRect();
-
-    const btnWidth = noButton.offsetWidth;
-    const btnHeight = noButton.offsetHeight;
-
-    const maxX = cardRect.width - btnWidth - padding * 2;
-    const maxY = cardRect.height - btnHeight - padding * 2;
-
-    const x = Math.random() * maxX + padding;
-    const y = Math.random() * maxY + padding;
-
-    noButton.style.position = "absolute";
-    noButton.style.left = x + "px";
-    noButton.style.top = y + "px";
-}
 
 function escapeButton(){
 
@@ -108,7 +87,7 @@ Math.floor(Math.random()*funnyMessages.length)
 
 noCount++;
 
-moveButton();
+showFloatingMessage();
 noButton.addEventListener("touchstart",(e)=>{
 e.preventDefault();
 escapeButton();
@@ -437,5 +416,28 @@ comment.addEventListener("input",()=>{
 answers.comment = comment.value;
 
 });
+
+}
+
+function showFloatingMessage(){
+
+    const msg = document.createElement("div");
+
+    msg.className = "floatingMessage";
+
+    msg.innerHTML = funnyMessages[
+        Math.floor(Math.random()*funnyMessages.length)
+    ];
+
+    const card = document.querySelector(".card");
+
+    msg.style.left = (20 + Math.random()*60) + "%";
+    msg.style.top = (45 + Math.random()*35) + "%";
+
+    card.appendChild(msg);
+
+    setTimeout(()=>{
+        msg.remove();
+    },1800);
 
 }

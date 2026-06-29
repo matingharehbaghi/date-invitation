@@ -687,3 +687,55 @@ textarea{
 }
 
 }
+
+.floatingMessage{
+
+position:absolute;
+
+padding:10px 16px;
+
+background:white;
+
+border-radius:18px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+font-size:20px;
+
+font-weight:700;
+
+color:#8d2d63;
+
+pointer-events:none;
+
+animation:floatMessage 1.8s ease forwards;
+
+z-index:999;
+
+}
+
+@keyframes floatMessage{
+
+0%{
+
+opacity:0;
+
+transform:translateY(30px) scale(.8);
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+transform:translateY(-60px) scale(1.1);
+
+}
+
+}
